@@ -22,6 +22,7 @@ var (
 	logger     = log.New(os.Stdout, "[gin] ", 0)
 	immediate  = false
 	buildError error
+	extensions = []string{".go", ".tmpl"}
 )
 
 func main() {
@@ -169,10 +170,14 @@ func scanChanges(watchPath string, cb scanCallback) {
 				return nil
 			}
 
-			if filepath.Ext(path) == ".go" && info.ModTime().After(startTime) {
-				cb(path)
-				startTime = time.Now()
-				return errors.New("done")
+			if info.ModTime().After(startTime) {
+				for _, ext := range extensions {
+					if ext == filepath.Ext(path) {
+						cb(path)
+						startTime = time.Now()
+						return errors.New("done")
+					}
+				}
 			}
 
 			return nil
