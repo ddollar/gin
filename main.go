@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/codegangsta/cli"
-	"github.com/codegangsta/envy/lib"
-	"github.com/codegangsta/gin/lib"
+	"github.com/ddollar/gin/Godeps/_workspace/src/github.com/codegangsta/cli"
+	"github.com/ddollar/gin/Godeps/_workspace/src/github.com/codegangsta/envy/lib"
+	"github.com/ddollar/gin/Godeps/_workspace/src/github.com/codegangsta/gin/lib"
 
 	"log"
 	"os"

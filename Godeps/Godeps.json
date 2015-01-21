@@ -1,0 +1,22 @@
+{
+	"ImportPath": "github.com/ddollar/gin",
+	"GoVersion": "go1.4.1",
+	"Packages": [
+		"."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/codegangsta/cli",
+			"Comment": "1.2.0-50-ga14c5b4",
+			"Rev": "a14c5b47c7efa4ff80cc42e1079a34b4756f2311"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/envy/lib",
+			"Rev": "25e5d50415d96a367adac8bd567608d78a50bef0"
+		},
+		{
+			"ImportPath": "github.com/codegangsta/gin/lib",
+			"Rev": "b08e9e5b661c45a81d80909024ef1c1ddad6071f"
+		}
+	]
+}
